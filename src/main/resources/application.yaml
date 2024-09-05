@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: quotely
+  cloud:
+    openfeign:
+      client:
+        config:
+          forismatic:
+            url: https://api.forismatic.com/
+  shell:
+    interactive:
+      enabled: true
+    script:
+      enabled: true
+
+logging:
+  level:
+    com:
+      gremlin:
+        quotely:
+          QuotelyApplication: ERROR
+    org:
+      springframework:
+        cloud:
+          context:
+            scope:
+              GenericScope: ERROR
+        context:
+          annotation:
+            AnnotationConfigApplicationContext: ERROR
+      jline: ERROR
